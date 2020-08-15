@@ -67,7 +67,7 @@ client.on("message", async (message) => {
             if(!args.slice(0).join(' ')) return message.channel.send('what am i supposed to spam bruhh')
             let spamx = 0
             while(spamx < 500){
-                setTimeout(() => {message.channel.send(args.slice(0).join(' '));}, 200);
+                setTimeout(() => {message.channel.send(args.slice(0).join(' '));}, 750);
                 spamx++
             }
         break;
