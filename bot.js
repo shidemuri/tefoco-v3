@@ -9,6 +9,7 @@ client.on("ready", () => {
 });
 
 client.on("message", async (message) => {
+    if(message.author.bot) return;
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const comando = args.shift().toLowerCase();
 
@@ -61,8 +62,11 @@ client.on("message", async (message) => {
             message.author.send(`${help.slice(0).join(`\n`)}`).catch(() => message.channel.send(`enable yo dms dumbass`))
         break;
         case "spam":
+            message.delete();
             if(!args.slice(0).join(' ')) return message.channel.send('what am i supposed to spam bruhh')
-            for(let spam = 0; spam == 400; spam++) message.channel.send(`${args.slice(0).join(' ')}`)
+            for(let spam = 0; spam == 400; spam++){
+                message.channel.send(`${args.slice(0).join(' ')}`)
+            }
         break;
     }
 });
