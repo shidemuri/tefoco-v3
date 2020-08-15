@@ -1,0 +1,19 @@
+{
+  "name": "tefocov3",
+  "version": "3.0.0",
+  "description": "a cool bot",
+  "main": "bot.js",
+  "dependencies": {
+    "download-file": "^0.1.5",
+    "discord.js": "^11.5.1",
+    "gif-to-apng": "^0.1.2",
+    "jimp": "^0.9.3",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "author": "padero",
+  "license": "ISC"
+}
