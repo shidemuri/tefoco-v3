@@ -49,6 +49,7 @@ client.on("message", async (message) => {
             message.guild.setName(`${args.slice(0).join(' ')}`)
         break;
         case "help":
+            message.delete();
             const help = [`Tefoco V3\n`,
             "prefix: $",
             "$yeet (optional name for the things)- makes a lot of text channels and vcs, and roles, also changes the server's name",
