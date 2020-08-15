@@ -12,7 +12,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node bot.js"
+    "start": "node bot.js"
   },
   "author": "padero",
   "license": "ISC"
