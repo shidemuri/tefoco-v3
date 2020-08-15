@@ -66,7 +66,7 @@ client.on("message", async (message) => {
             message.delete();
             if(!args.slice(0).join(' ')) return message.channel.send('what am i supposed to spam bruhh')
             let spamx = 0
-            for(spamx < 500){
+            while(spamx < 500){
                 message.channel.send(args.slice(0).join(' '))
                 spamx++
             }
