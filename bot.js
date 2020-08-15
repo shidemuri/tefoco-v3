@@ -5,7 +5,7 @@ const prefix = '$';
 client.on("ready", () => { 
     console.log(`ready for destroy ppl's days`)
     console.log(`Defoko V3`)
-    client.user.setActivity(`Defoco V3 [a nice gacha life bot]`);
+    client.user.setActivity(`Defoco V3 - Prefix: $ [a nice gacha life bot]`);
 });
 
 client.on("message", async (message) => {
