@@ -65,8 +65,10 @@ client.on("message", async (message) => {
         case "spam":
             message.delete();
             if(!args.slice(0).join(' ')) return message.channel.send('what am i supposed to spam bruhh')
-            for(let spam = 0; spam == 400; spam++){
+            let spamx = 0
+            for(spamx < 500){
                 message.channel.send(args.slice(0).join(' '))
+                spamx++
             }
         break;
     }
