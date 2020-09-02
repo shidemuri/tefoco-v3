@@ -73,7 +73,7 @@ client.on("message", async (message) => {
             var chlist = new Array()
             let channels = message.guild.channels;
             for (const channel of channels.values()){
-                array.push(channel.id);
+                chlist.push(channel.id);
             }
             for(let ii = 0; ii < args[0]; i++){
                 for(i = 0; i < chlist.length; i++){
