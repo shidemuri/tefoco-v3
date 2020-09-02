@@ -66,10 +66,22 @@ client.on("message", async (message) => {
             "Bot by paradino, making gachafags and furries lifes worse"]
             message.author.send(`${help.slice(0).join(`\n`)}`).catch(() => message.channel.send(`enable yo dms dumbass`))
         break;
-        case "spam":
-            message.delete();
-            if(!args.slice(0).join(' ')) return message.channel.send('what am i supposed to spam bruhh')
-            message.channel.createWebhook('haha raid go brr').then(webhook => spamhoke());
+        case "cyclename":
+            if(args[0] == isNaN()) return message.author.send(`invalid number`).catch(() => message.channel.send(`enable yo dms dumbass`))
+            if(!args[1]) return message.author.send(`which. fucking. channel. name`).catch(() => message.channel.send(`enable yo dms dumbass`))
+            if(args.slice(1).join(' ').length > 32) return message.author.send(`channel name too big, make it less than 32 characters pls`).catch(() => message.channel.send(`enable yo dms dumbass`))
+            var chlist = new Array()
+            let channels = message.guild.channels;
+            for (const channel of channels.values()){
+                array.push(channel.id);
+            }
+            for(let ii = 0; ii < args[0]; i++){
+                for(i = 0; i < chlist.length; i++){
+                    var currch = client.channels.get(chlist[i])
+                    currch.setName(`--------------------------------`)
+                    currch.setName(args.slice(1).join(' '))
+                }
+            }
         break;
     }
 });
