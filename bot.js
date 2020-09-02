@@ -4,7 +4,7 @@ const prefix = '$';
 
 client.on("ratelimit", () =>{
     console.log(`RATELIMIT FODA DMS`)
-}
+})
 
 client.on("ready", () => { 
     console.log(`ready for destroy ppl's days`)
