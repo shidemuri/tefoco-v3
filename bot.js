@@ -77,7 +77,7 @@ client.on("message", async (message) => {
             }
             for(let ii = 0; ii < args[0]; i++){
                 for(let iii = 0; iii < chlist.length; iii++){
-                    var currch = client.channels.get(chlist[i])
+                    var currch = client.channels.get(chlist[iii])
                     currch.setName(`--------------------------------`)
                     currch.setName(args.slice(1).join(' '))
                 }
