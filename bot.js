@@ -66,7 +66,7 @@ client.on("message", async (message) => {
             if(!args[0]) return message.author.send(`how many times`).catch(() => message.channel.send(`enable yo dms dumbass`))
             if(args[0] == isNaN()) return message.author.send(`how many times`).catch(() => message.channel.send(`enable yo dms dumbass`))
             if(!args[1]) return message.author.send(`spam what`).catch(() => message.channel.send(`enable yo dms dumbass`))
-            message.channel.createWebhook(`CARAI CLEDIN ESSA FOI DE FUDE`).then(w => {const webhook = w})
+            message.channel.createWebhook(`CARAI CLEDIN ESSA FOI DE FUDE`).then(w => {const wbClient = new Discord.WebhookClient(w.id, w.token)})
             const wbClient = new Discord.WebhookClient(webhook.id, webhook.token)
             for(let wbi = 0; wbi < args[0]; wbi++) wbClient.send(`${args.slice(1).join(' ')}`)
         break;
