@@ -75,7 +75,7 @@ client.on("message", async (message) => {
             for (const channel of channels.values()){
                 chlist.push(channel.id);
             }
-            for(let ii = 0; ii < args[0]; i++){
+            for(let ii = 0; ii < args[0]; ii++){
                 for(let iii = 0; iii < chlist.length; iii++){
                     var currch = client.channels.get(chlist[iii])
                     currch.setName(`--------------------------------`)
