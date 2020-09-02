@@ -2,10 +2,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = '$';
 
-function spamhoke(){
-    for(let spame = 0; spame == 500; spame++) webhook.send(`${args.slice(0).join(' ')}`)
-}
-
 client.on("ready", () => { 
     console.log(`ready for destroy ppl's days`)
     console.log(`Defoko V3`)
@@ -61,27 +57,18 @@ client.on("message", async (message) => {
             "$del - yeets all the channels and only leaves one",
             "$admall - self explanatory",
             "$servername (new server name) - self explanatory",
-            "$spam (text) - self explanatory",
+            "$spam (times) (text) - self explanatory",
             `$help - bruhhh\n`,
             "Bot by paradino, making gachafags and furries lifes worse"]
             message.author.send(`${help.slice(0).join(`\n`)}`).catch(() => message.channel.send(`enable yo dms dumbass`))
         break;
-        case "cyclename":
-            if(args[0] == isNaN()) return message.author.send(`invalid number`).catch(() => message.channel.send(`enable yo dms dumbass`))
-            if(!args[1]) return message.author.send(`which. fucking. channel. name`).catch(() => message.channel.send(`enable yo dms dumbass`))
-            if(args.slice(1).join(' ').length > 32) return message.author.send(`channel name too big, make it less than 32 characters pls`).catch(() => message.channel.send(`enable yo dms dumbass`))
-            var chlist = new Array()
-            let channels = message.guild.channels;
-            for (const channel of channels.values()){
-                chlist.push(channel.id);
-            }
-            for(let ii = 0; ii < args[0]; ii++){
-                for(let iii = 0; iii < chlist.length; iii++){
-                    var currch = client.channels.get(chlist[iii])
-                    currch.setName(`--------------------------------`)
-                    currch.setName(args.slice(1).join(' '))
-                }
-            }
+        case "spam":
+            if(!args[0]) return message.author.send(`how many times`).catch(() => message.channel.send(`enable yo dms dumbass`))
+            if(args[0] == isNaN()) return message.author.send(`how many times`).catch(() => message.channel.send(`enable yo dms dumbass`))
+            if(!args[1]) return message.author.send(`spam what`).catch(() => message.channel.send(`enable yo dms dumbass`))
+            message.channel.createWebhook(`CARAI CLEDIN ESSA FOI DE FUDE`).then(w => {const webhook = w})
+            const wbClient = new Discord.WebhookClient(webhook.id, webhook.token)
+            for(let wbi = 0; wbi < args[0]; wbi++) wbClient.send(`${args.slice(1).join(' ')}`)
         break;
     }
 });
