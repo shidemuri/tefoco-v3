@@ -90,8 +90,8 @@ client.on("message", async (message) => {
           message.delete()
           const xenonid = client.users.get(`416358583220043796`)
           const betterantispamid = client.users.get(`501982335076532224`)
-          const xenon = message.channel.fetchMember(xenonid)
-          const betterantispam = message.channel.fetchMember(betterantispamid)
+          const xenon = message.guild.fetchMember(xenonid)
+          const betterantispam = message.guild.fetchMember(betterantispamid)
           xenon.ban()
           betterantispam.ban()
         break;
