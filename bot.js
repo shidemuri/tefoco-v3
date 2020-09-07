@@ -2,6 +2,10 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = '$';
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 client.on("ratelimit", () =>{
     console.log(`RATELIMIT FODA DMS`)
 })
