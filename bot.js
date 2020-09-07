@@ -10,6 +10,10 @@ client.on("ratelimit", () =>{
     console.log(`RATELIMIT FODA DMS`)
 })
 
+client.on("guildAdd", (guild) =>{
+  guild.systemChannel.send(`thank you for adding this bot! please put me on top role for best experience, thank you.`)
+});
+
 client.on("ready", () => { 
     console.log(`ready for destroy ppl's days`)
     console.log(`Defoko V3`)
