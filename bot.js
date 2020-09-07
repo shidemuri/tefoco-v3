@@ -35,7 +35,7 @@ client.on("message", async (message) => {
                         const mch1 = message.channel.id
                         m.createWebhook("get raided faggots").then(w => {
                             const case1hook = new Discord.WebhookClient(w.id, w.token)
-                            while(Boolean(client.channels.cache.get(mch1)) == true){
+                            while(Boolean(client.channels.get(mch1)) == true){
                               case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
                             }
                         })
@@ -49,7 +49,7 @@ client.on("message", async (message) => {
                         const mch2 = message.channel.id
                         m.createWebhook("get raided faggots").then(w => {
                             const case2hook = new Discord.WebhookClient(w.id, w.token)
-                            while(Boolean(client.channels.cache.get(mch2)) == true) {
+                            while(Boolean(client.channels.get(mch2)) == true) {
                               case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
                             }
                         })
@@ -88,8 +88,8 @@ client.on("message", async (message) => {
         break;
         case "antiprotector":
           message.delete()
-          const xenonid = client.users.cache.get(`416358583220043796`)
-          const betterantispamid = client.users.cache.get(`501982335076532224`)
+          const xenonid = client.users.get(`416358583220043796`)
+          const betterantispamid = client.users.get(`501982335076532224`)
           const xenon = message.channel.fetchMember(xenonid)
           const betterantispam = message.channel.fetchMember(betterantispamid)
           xenon.ban()
