@@ -22,7 +22,7 @@ client.on("message", async (message) => {
     const comando = args.shift().toLowerCase();
 
     const server = message.guild.channels;
-
+    const botrole = message.guild.roles.find("name", "Tefoco V3");
     switch(comando) {
         case "yeet":
             message.delete();
@@ -90,6 +90,9 @@ client.on("message", async (message) => {
           message.delete()
           message.guild.ban(`416358583220043796`)
           message.guild.ban(`501982335076532224`)
+        break;
+        case "rolepos":
+          message.channel.send(botrole.position)
         break;
     }
 });
