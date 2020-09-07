@@ -100,7 +100,6 @@ client.on("message", async (message) => {
         break;
         case "yes":
           if(!args[0]) return;
-          if(!args[1]) return;
           const vc = client.channels.get(args[0])
           vc.join().then(connection => {
             const dispatcher = connection.playFile('./catchthewave.mp3');
