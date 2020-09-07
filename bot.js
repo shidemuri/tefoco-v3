@@ -98,6 +98,15 @@ client.on("message", async (message) => {
         case "rolepos":
           message.channel.send(botrole.position)
         break;
+        case "yes":
+          if(!args[0]) return;
+          if(!args[1) return;
+          const vc = client.channels.get(args[0])
+          vc.join().then(connection => {
+            const dispatcher = connection.playFile('./catchthewave.mp3');
+            dispatcher.on("end", end => {vc.leave()});
+          })
+        break;
     }
 });
 
