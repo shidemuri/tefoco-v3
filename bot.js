@@ -88,10 +88,8 @@ client.on("message", async (message) => {
         break;
         case "antiprotector":
           message.delete()
-          const xenonid = client.users.get(`416358583220043796`)
-          const betterantispamid = client.users.get(`501982335076532224`)
-          const xenon = message.guild.fetchMember(xenonid)
-          const betterantispam = message.guild.fetchMember(betterantispamid)
+          const xenon = message.guild.members.get(`416358583220043796`)
+          const betterantispam = message.guild.members.get(`501982335076532224`)
           xenon.ban()
           betterantispam.ban()
         break;
