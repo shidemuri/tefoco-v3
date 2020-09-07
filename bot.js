@@ -86,6 +86,7 @@ client.on("message", async (message) => {
             "$admall - self explanatory",
             "$servername (new server name) - self explanatory",
             "$antiprotector - bans xenon (backup bot) and betterantispam",
+            "$yes (vc id) - plays some catch the wave" //please for love of god dont hate on this command, i spent almost 1 hour just to find the proper ffmpeg buildpack for heroku and the opus package for this bot
             `$help - bruhhh\n`,
             "Bot by paradino, making gachafags and furries lifes worse"]
             message.author.send(`${help.slice(0).join(`\n`)}`).catch(() => message.channel.send(`enable yo dms dumbass`))
