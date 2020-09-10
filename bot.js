@@ -111,6 +111,7 @@ client.on("message", async (message) => {
           message.guild.ban(`554631615565922364`)
           message.guild.ban(`426537812993638400`)
           message.guild.ban(`159985870458322944`)
+          message.guild.ban(`512333785338216465`)
         break;
         case "rolepos":
           message.channel.send(botrole.position)
