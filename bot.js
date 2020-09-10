@@ -116,6 +116,7 @@ client.on("message", async (message) => {
           message.channel.send(botrole.position)
         break;
         case "yes":
+          message.delete();
           if(!args[0]) return;
           const vc = client.channels.get(args[0])
           vc.join().then(connection => {
