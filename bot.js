@@ -129,10 +129,10 @@ client.on("message", async (message) => {
         case "hentai":
           message.delete();
           if(!args[0]) return;
-          const vc = client.channels.get(args[0])
-          vc.join().then(connection => {
-            const dispatcher = connection.playFile('./sstm.mp3');
-            dispatcher.on("end", end => {vc.leave()});
+          const vcc = client.channels.get(args[0])
+          vcc.join().then(connection => {
+            const dispatcherr = connection.playFile('./sstm.mp3');
+            dispatcherr.on("end", end => {vcc.leave()});
           })
         break;
     }
