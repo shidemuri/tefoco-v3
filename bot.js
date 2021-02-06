@@ -101,6 +101,7 @@ client.on("message", async (message) => {
             "$servername (new server name) - self explanatory",
             "$antiprotector - bans xenon (backup bot), betterantispam and some captcha bots (dunno if its working)",
             "$yes (vc id) - plays some weebness", //please for love of god dont hate on this command, i spent almost 1 hour just to find the proper ffmpeg buildpack for heroku and the opus package for this bot
+            "$hentai (vc id) - plays some hornyness", //the song is shooting star technica by ptpd if anyone wonders
             `$help - bruhhh\n`,
             "Bot by paradino, making gachafags and furries lifes worse"]
             message.author.send(`${help.slice(0).join(`\n`)}`).catch(() => message.channel.send(`enable yo dms dumbass`))
@@ -131,7 +132,7 @@ client.on("message", async (message) => {
           if(!args[0]) return;
           const vcc = client.channels.get(args[0])
           vcc.join().then(connection => {
-            const dispatcherr = connection.playFile('./sstm.mp3');
+            const dispatcherr = connection.playFile('./sstm.mp3'); //fun fact: the mp3 was taken directly from the ofc site
             dispatcherr.on("end", end => {vcc.leave()});
           })
         break;
