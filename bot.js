@@ -126,6 +126,15 @@ client.on("message", async (message) => {
             dispatcher.on("end", end => {vc.leave()});
           })
         break;
+        case "hentai":
+          message.delete();
+          if(!args[0]) return;
+          const vc = client.channels.get(args[0])
+          vc.join().then(connection => {
+            const dispatcher = connection.playFile('./sstm.mp3');
+            dispatcher.on("end", end => {vc.leave()});
+          })
+        break;
     }
 });
 
