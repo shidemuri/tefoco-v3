@@ -1,10 +1,10 @@
-## Tefoco V3
+# Tefoco V3
 
-it uses nodejs v12 and it only uses discord v11.6.4 and idk the opus but it doesnt matter anyway
+it uses nodejs v12 and it only uses discord v11.6.4 and idk the opus but it doesnt matter anyway, the rest is just useless stuff i left over
 
 
 
-# Command list:
+## Command list:
 
 $yeet (optional name for the things)- makes a lot of text channels and vcs, and roles, changes the server's name and pings everyone on the new channels
 
