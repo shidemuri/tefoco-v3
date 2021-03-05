@@ -4,6 +4,8 @@ it uses nodejs v12 and it only uses discord v11.6.4 and idk the opus but it does
 
 i made it just to learn how to use js so dont expect it to update a lot
 
+replace the process.env.token thing with the bot token (on quotes)
+
 ## Command list:
 
 $yeet (optional name for the things)- makes a lot of text channels and vcs, and roles, changes the server's name and pings everyone on the new channels
