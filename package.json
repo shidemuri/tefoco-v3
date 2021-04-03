@@ -6,11 +6,7 @@
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
     "discord.js": "^11.6.4",
-    "download-file": "^0.1.5",
-    "ffmpeg-static": "^4.2.7",
-    "gif-to-apng": "^0.1.2",
-    "jimp": "^0.9.3",
-    "lowdb": "^1.0.0"
+    "ffmpeg-static": "^4.2.7"
   },
   "devDependencies": {},
   "scripts": {
