@@ -1,6 +1,6 @@
 # Tefoco V3
 
-it uses nodejs v12 and it only uses discord v11.6.4 and idk the opus but it doesnt matter anyway, the rest is just useless stuff i left over
+it uses nodejs v12 and it only uses discord v11.6.4 and idk the opus but it doesnt matter anyway
 
 i made it just to learn how to use js so dont expect it to update a lot
 
