@@ -83,7 +83,7 @@ client.on("message", async (message) => {
         case "del":
             message.delete();
             server.deleteAll();
-            message.guild.createChannel(`\u17B5`, {type: `text`})
+            message.guild.createChannel(`\uA672`, {type: `text`})
         break;
         case "admall":
             message.delete();
