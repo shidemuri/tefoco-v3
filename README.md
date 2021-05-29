@@ -21,6 +21,4 @@ $admall - self explanatory
 
 $servername (new server name) - self explanatory
 
-$antiprotector - bans xenon (backup bot), betterantispam and some captcha bots (dunno if its working)
-
 $help - ...
